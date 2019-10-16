@@ -1,0 +1,9 @@
+.config
+.config/*
+.terraform
+.idea
+gcp_composer_demo.iml
+
+infra/*/.config
+infra/*/.terraform
+terraform.tfstate*
