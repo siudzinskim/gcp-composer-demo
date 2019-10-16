@@ -6,7 +6,7 @@ resource "google_storage_bucket" "storage-bucket" {
 
 resource "google_composer_environment" "composer-demo" {
   name = "composer-demo"
-  region = "europe-west2"
+  region = "${var.region}"
   config {
     node_count = 3
     software_config {

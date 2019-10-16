@@ -188,12 +188,11 @@ start_dataprep = http_operator.SimpleHttpOperator(
         'Authorization': 'Bearer {}'.format(DATAPREP_KEY),
         'content-type': 'application/json'
     },
-    data='{"wrangledDataset": {"id":'+DATAPREP_WRANGLED_DATASET_ID+'}}',
+    data='{"wrangledDataset": {"id":' + DATAPREP_WRANGLED_DATASET_ID + '}}',
     xcom_push=True,
     log_response=True,
     dag=dag
 )
-
 
 get_dataprep_job_id = python_operator.PythonOperator(
     task_id='get_dataprep_job_id',
