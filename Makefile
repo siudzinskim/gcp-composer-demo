@@ -121,7 +121,7 @@ connect-datalab:
 	datalab connect lab01
 
 setup-composer:
-	gcloud composer environments run composer-demo --location=${TF_VAR_region} connections -- -a --conn_id=cloud_dataprep_2 --conn_host=https://api.clouddataprep.com --conn_type=HTTP
+	gcloud composer environments run composer-demo --location=${TF_VAR_region} connections -- -a --conn_id=cloud_dataprep --conn_host=https://api.clouddataprep.com --conn_type=HTTP
 	gcloud composer environments run composer-demo --location=${TF_VAR_region} variables -- -s PROJECT_ID ${TF_VAR_project}
 	gcloud composer environments run composer-demo --location=${TF_VAR_region} variables -- -s DATAPREP_KEY ""
 	gcloud composer environments run composer-demo --location=${TF_VAR_region} variables -- -s DATAPREP_WRANGLED_DATASET_ID 0
